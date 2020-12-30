@@ -16,7 +16,7 @@ banner:
 permalink: /:year/:month/:day/:title/
 paginate: 10
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', '.DS_Store']
 
 github_username: kevinhuang88
 
