@@ -1,9 +1,9 @@
 ---
 title: 【Fw】Autocracy is Winning
 date: 2021-11-15 22:48:17
-tagline: 
-tags: [长恨此身非我有, 含英咀华]
-category: 尘埃不见咸阳桥
+description: If Americans don’t help to hold murderous regimes to account, those regimes will retain their sense of impunity
+tags: [Chang_hen_ci_shen_fei_wo_you, Han_ying_ju_hua]
+category: Chen_ai_bu_jian_xian_yang_qiao
 ---
 Written by Anne Applebaum, illustrated by Michael Houtz. [Original](https://www.theatlantic.com/magazine/archive/2021/12/the-autocrats-are-winning/620526/).
 

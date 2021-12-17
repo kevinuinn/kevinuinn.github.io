@@ -1,9 +1,9 @@
 ---
 title: 【Fw】 China has two Paths to Global Domination
 date: 2020-05-22 08:32:14
-tagline: 
-tags: [谈笑有鸿儒, 含英咀华]
-category: 尘埃不见咸阳桥
+description: The US has to be vigilant 
+tags: [Tan_xiao_you_hong_ru, Han_ying_ju_hua]
+category: Chen_ai_bu_jian_xian_yang_qiao
 ---
 The authors are Hal Brands and Jake Sullivan. [Original](https://foreignpolicy.com/2020/05/22/china-superpower-two-paths-global-domination-cold-war/).  
 
