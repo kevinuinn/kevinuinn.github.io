@@ -1,11 +1,20 @@
+<section id="comments" class="comment">
+  <div id="article-content">
+    <p>欢迎对文章进行评论！有两个评论系统可选：Disqus（音同discuss）和Livere（音同library）。视所处网络环境和喜好，可任选评论。<br></p>
+  </div>
+</section>
 {% if site.duoshuo_shortname %}
 <section id="comments" class="comment">
 	<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ site.baseurl }}{{ page.url }}"></div>
 </section>
-{% elsif site.disqus_shortname %}
+{% endif %}
+{% if site.disqus_shortname %}
 <section id="comments" class="comment">
+  <p> Disqus 评论区<br> </p>
   <div id="disqus_thread">
+    
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <br>
   </div>
 </section>
 {% elsif site.hypercomments_id %}
@@ -51,4 +60,15 @@ var cloudTieConfig = {
 var yunManualLoad = true;
 Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
 </script>
+{% endif %}
+{% if site.livere %}
+<section id="comments" class="comment">
+  <div id="lv-container" data-id="city" data-uid="{{ site.livere }}">
+  <p> Livere 评论区<br> </p>
+ 
+<noscript> 为正常使用评论功能请激活JavaScript</noscript>
+<br>
+</div>
+</section>
+
 {% endif %}

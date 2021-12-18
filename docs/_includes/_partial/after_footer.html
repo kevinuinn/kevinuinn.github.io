@@ -219,6 +219,22 @@ var disqus_shortname = '{{ site.disqus_shortname }}';
   Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
 </script>
 {% endif %}
+{% if site.livere %}
+  <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+  </script>
+<br>
+{% endif %}
 
 <!--
 {% if page.layout == 'tags' or page.layout == 'categories' %}
