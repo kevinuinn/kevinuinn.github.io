@@ -9,7 +9,7 @@ A man in his twenties, with little hair and shallow mind. Finding it hard to enc
 
 请参阅页面底部的其它社交媒体平台以获取更详细信息。
 
-&nbsp;
+---
 
 __由于系统原因，标签和分类页面只能使用ASCII字符。它们对应的中文分别是：__
 
@@ -23,3 +23,6 @@ __由于系统原因，标签和分类页面只能使用ASCII字符。它们对�
 - 谈笑有鸿儒
 - 路转溪桥忽见
 
+---
+
+关于评论：每篇文章都下设评论区，欢迎大家发表高见。由于网络环境等因素，共有两套评论系统：Disqus（音同discuss）和Livere（音同library）。视所处网络环境和喜好，可任选评论。前者需要梯子访问，但支持匿名。如果要登录，可选微信、QQ、Facebook或Twitter等方法。
