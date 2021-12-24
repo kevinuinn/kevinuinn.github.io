@@ -13,6 +13,7 @@ A man in his twenties, with little hair and shallow mind. Finding it hard to enc
 
 __由于系统原因，标签和分类页面只能使用ASCII字符。它们对应的中文分别是：__
 
+- 一洗万古凡马空
 - 长恨此身非我有
 - 正是橙黄橘绿时
 - 尘埃不见咸阳桥

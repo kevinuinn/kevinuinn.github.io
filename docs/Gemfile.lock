@@ -1,6 +1,7 @@
 GEM
+  remote: https://rubygems.org/
   specs:
-    activesupport (6.0.4.1)
+    activesupport (6.0.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -44,11 +45,12 @@ GEM
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
+    fastimage (2.2.6)
     ffi (1.15.4)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
-    github-pages (219)
-      github-pages-health-check (= 1.17.7)
+    github-pages (222)
+      github-pages-health-check (= 1.17.9)
       jekyll (= 3.9.0)
       jekyll-avatar (= 0.7.0)
       jekyll-coffeescript (= 1.1.1)
@@ -88,10 +90,10 @@ GEM
       liquid (= 4.0.3)
       mercenary (~> 0.3)
       minima (= 2.5.1)
-      nokogiri (>= 1.10.4, < 2.0)
+      nokogiri (>= 1.12.5, < 2.0)
       rouge (= 3.26.0)
       terminal-table (~> 1.4)
-    github-pages-health-check (1.17.7)
+    github-pages-health-check (1.17.9)
       addressable (~> 2.3)
       dnsruby (~> 1.60)
       octokit (~> 4.0)
@@ -137,6 +139,9 @@ GEM
     jekyll-github-metadata (2.13.0)
       jekyll (>= 3.4, < 5.0)
       octokit (~> 4.0, != 4.4.0)
+    jekyll-image-size (1.2.1)
+      fastimage (>= 1.8)
+      jekyll (>= 3.7)
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
@@ -222,11 +227,9 @@ GEM
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
-    minitest (5.14.4)
+    minitest (5.15.0)
     multipart-post (2.1.1)
     nokogiri (1.12.5-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     octokit (4.21.0)
       faraday (>= 0.9)
@@ -273,6 +276,8 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-image-size (~> 1.2)
+  jemoji (~> 0.12.0)
 
 BUNDLED WITH
    2.2.32

@@ -173,4 +173,5 @@ simple_jekyll_search:
   fulltext: false
 
 plugins:
- ## - jemoji
+#  - jemoji
+  - jekyll-image-size
