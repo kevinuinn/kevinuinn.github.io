@@ -27,6 +27,9 @@ defaults:
 #### Pagination
 paginate: 10
 
+#future
+#future: true
+
 #### Site
 title : Tales of Copenhag
 tagline: A tier-one loser in academia
