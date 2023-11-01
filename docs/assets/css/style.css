@@ -636,7 +636,6 @@ header nav ul li a:hover {
 #main section.post a h1 {
 	color: #2ca6cb;
 	line-height: 2;
-	text-align: center;
 	text-indent: 0em;
 }
 
@@ -927,7 +926,7 @@ article header.article-info >h1 {
 	word-break: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	border-left: 5px solid #2ca6cb
+	text-align:center ;
 }
 
 @media only screen and (min-width:1024px) {
