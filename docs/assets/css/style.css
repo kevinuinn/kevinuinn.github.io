@@ -1126,7 +1126,7 @@ article .article-content img,article .article-content video,article .article-con
 	height: auto;
 	vertical-align: middle;
 	padding-top: .5em;
-	text-indent: 0em;
+	margin-left: -2em;
 }
 
 @media only screen and (min-width:1024px) {
@@ -1156,7 +1156,7 @@ article .article-content figcaption,article .article-content .caption {
 	position: relative;
 	font-size: .9em;
 	padding-left: 1.3em;
-	text-indent: 0em;
+	margin-left: -2em;
 }
 
 article .article-content figcaption:before,article .article-content .caption:before {
@@ -1166,7 +1166,7 @@ article .article-content figcaption:before,article .article-content .caption:bef
 	position: absolute;
 	left: 0;
 	top: .3em
-	text-indent: 0em;
+	margin-left: -2em;
 }
 
 article .article-content .video-container {
