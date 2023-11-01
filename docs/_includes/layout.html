@@ -28,11 +28,6 @@
       </body>
      </html>
 {% elsif page.layout == 'search' %}
-{% if page.custom_css %}
-    {% for stylesheet in page.custom_css %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
-    {% endfor %}
-  {% endif %}
 {% include _partial/head.html %}
     <body>
       <header>

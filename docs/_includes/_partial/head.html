@@ -50,7 +50,13 @@
     <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}{{ site.assets }}/{{ site.apple_icon }}">
     {% endif %}
 
-    <link rel="stylesheet" href="{{ site.baseurl }}{{ site.assets }}/css/style.css" type="text/css">
+    {% if page.custom_css %}
+    {% for stylesheet in page.custom_css %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css" type="text/css">
+    {% endfor %}
+    {% else %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" type="text/css">
+    {% endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}{{ site.assets }}/css/highlight.css" type="text/css">
     {% if site.banner_img %}
     <style>
