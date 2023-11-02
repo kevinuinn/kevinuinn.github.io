@@ -66,7 +66,7 @@ $(document).ready(function() {
   var tags = [
     {% for item in site.tags %}
       {% for objecttag in site.data.alltags %}
-        {% if tag == objecttag.name %}
+        {% if item == objecttag.name %}
           { "name": "{{ objecttag.display_name }}", "path": "{{ site.baseurl }}/tags/#{{ item[0] }}", "length": {{ item[1] | size }} },
         {% endif %}
       {% endfor %} 

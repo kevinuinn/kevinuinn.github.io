@@ -4,7 +4,11 @@
 		<ul class="clearfix">
 		{% for item in site.tags %}
 			{% if item[1] | size != 0 %}
-				<li><a href="{{ site.baseurl }}/tags/#{{ item[0] }}" title="{{ item[0] }}">{{ item[0] }}<sup>{{ item[1] | size }}</sup></a></li>
+				{% for objecttag in site.data.alltags %}
+      				{% if tag == objecttag.name %}
+        				<li><a href="{{ site.baseurl }}/tags/#{{ item[0] }}" title="{{ objecttag.display_name }}">{{ objecttag.display_name }}<sup>{{ item[1] | size }}</sup></a></li>
+      				{% endif %}
+    			{% endfor %}
 			{% endif %}
 		{% endfor %}
 		</ul>

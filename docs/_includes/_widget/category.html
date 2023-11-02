@@ -4,7 +4,13 @@
 		<ul>
 		{% for item in site.categories %}
 		  {% if item[1] | size != 0 %}
-			<li><a href="{{ site.baseurl }}/categories/#{{ item[0] }}" title="{{ item[0] }}">{{ item[0] }}<sup>{{ item[1] | size }}</sup></a></li>
+		  	{% for objectcategory in site.data.allcats %}
+      			{% if category == objectcategory.name %}
+        			<li>
+        				<a href="{{ site.baseurl }}/categories/#{{ item[0] }}" title="{{ objectcategory.display_name }}">{{ objectcategory.display_name }}<sup>{{ item[1] | size }}</sup></a>
+        			</li>
+      			{% endif %}
+    		{% endfor %}
 		  {% endif %}
 		{% endfor %}
 		</ul>

@@ -63,10 +63,14 @@ if (page.archive){
   <ul class="archive-list">
   <div class="archiveslist archive-float clearfix">
     {% for category in site.categories  %}
-    <li class="archive-list-item">
-    <a class="archive-list-link" href="#{{ category[0] }}">{{ category[0] }}</a>
-    <span class="archive-list-count">{{ category[1] | size }}</span>
-    </li>
+      {% for objectcategory in site.data.allcats %}
+        {% if category == objectcategory.name %}
+          <li class="archive-list-item">
+            <a class="archive-list-link" href="#{{ category[0] }}">{{ objectcategory.display_name }}</a>
+            <span class="archive-list-count">{{ category[1] | size }}</span>
+          </li>
+        {% endif %}
+      {% endfor %}
     {% endfor %}
  </div>
  </ul>
@@ -77,10 +81,14 @@ if (page.archive){
   <ul class="archive-list">
   <div class="archiveslist archive-float clearfix">
     {% for tag in site.tags  %}
-    <li class="archive-list-item">
-    <a class="archive-list-link" href="#{{ tag[0] }}">{{ tag[0] }}</a>
-    <span class="archive-list-count">{{ tag[1] | size }}</span>
-    </li>
+      {% for objecttag in site.data.alltags %}
+        {% if tag == objecttag.name %}
+          <li class="archive-list-item">
+            <a class="archive-list-link" href="#{{ tag[0] }}">{{ objecttag.display_name }}</a>
+            <span class="archive-list-count">{{ tag[1] | size }}</span>
+          </li>
+        {% endif %}
+      {% endfor %}
     {% endfor %}
  </div>
  </ul>
