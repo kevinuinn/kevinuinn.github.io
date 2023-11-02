@@ -1,9 +1,13 @@
-- name: Tan_xiao_you_hong_ru
-	display_name: 谈笑有鸿儒
-- name: Han_ying_ju_hua
-  display_name: 含英咀华
-- name: Chang_hen_ci_shen_fei_wo_you
-  display_name: 长恨此身非我有
-- name: Xin_you_ling_xi_yi_dian_tong
-  display_name: 心有灵犀一点通
+-
+ name: Tan_xiao_you_hong_ru
+ display_name: 谈笑有鸿儒
+- 
+ name: Han_ying_ju_hua
+ display_name: 含英咀华
+- 
+ name: Chang_hen_ci_shen_fei_wo_you
+ display_name: 长恨此身非我有
+- 
+ name: Xin_you_ling_xi_yi_dian_tong
+ display_name: 心有灵犀一点通
 
