@@ -65,7 +65,11 @@ $(document).ready(function(){
 $(document).ready(function() {
   var tags = [
     {% for item in site.tags %}
-    { "name": "{{ item[0] }}", "path": "{{ site.baseurl }}/tags/#{{ item[0] }}", "length": {{ item[1] | size }} },
+      {% for objecttag in site.data.alltags %}
+        {% if tag == objecttag.name %}
+          { "name": "{{ objecttag.display_name }}", "path": "{{ site.baseurl }}/tags/#{{ item[0] }}", "length": {{ item[1] | size }} },
+        {% endif %}
+      {% endfor %} 
     {% endfor %}
   ];
   $("#tagcloud").html(tagcloudHelper(tags));
@@ -234,6 +238,8 @@ var disqus_shortname = '{{ site.disqus_shortname }}';
    })(document, 'script');
   </script>
 <br>
+{% endif %}
+{% if site.twikoo %}
 {% endif %}
 
 <!--

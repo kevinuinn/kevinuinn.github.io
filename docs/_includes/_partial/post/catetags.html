@@ -12,8 +12,8 @@
   -->
   {% for category in item.categories %}
     {% for objectcategory in site.data.allcats %}
-      {% if category == objectivecategory.name %}
-        <a class="article-category-link" href="{{ site.baseurl }}/categories/#{{ category }}">{{ objectivecategory.display_name }}</a>
+      {% if category == objectcategory.name %}
+        <a class="article-category-link" href="{{ site.baseurl }}/categories/#{{ category }}">{{ objectcategory.display_name }}</a>
       {% endif %}
     {% endfor %}
   {% endfor %}
@@ -29,7 +29,12 @@
   <span></span> <!--<%- tags.join('') %>-->
   
   {% for tag in item.tags %}
-  <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
+    {% for objecttag in site.data.alltags %}
+      {% if tag == objecttag.name %}
+        <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ objecttag.display_name }}</a>
+      {% endif %}
+    {% endfor %}
+  
   {% endfor %}
   </div>
 {% endif %}
