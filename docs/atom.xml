@@ -1,28 +1,28 @@
 ---
 layout: null
-title : Atom Feed
+title : RSS Feed Subscription
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<rss  ver = "2.0" xmlns="http://www.w3.org/2005/Atom">
 
- <title>{{ site.title | xml_escape }}</title>
- <link href="{{ site.url }}{{site.baseurl}}{{ site.rss }}" rel="self"/>
- <link href="{{ site.url }}{{site.baseurl}}"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.url }}{{site.baseurl}}</id>
- <author>
-   <name>{{ site.author.name | xml_escape }}</name>
-   <email>{{ site.author.email }}</email>
- </author>
+<channel>
+  <title>{{ site.title | xml_escape }}</title>
+  <link href="{{ site.url }}{{site.baseurl}}"/>
+  <copyright> Powered by jekyll and Theme by Jacman © Copenhag </copyright>
+  <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+  <id>{{ site.url }}{{site.baseurl}}</id>
+  
 
- {% for post in site.posts limit:20 %}
- <entry>
-   <title>{{ post.title | xml_escape }}</title>
-   <link href="{{ site.url }}{{site.baseurl}}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.url }}{{site.baseurl}}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
- </entry>
- {% endfor %}
+  {% for post in site.posts limit: 20 %}
+  <item>
+    <author> {{site.author.name}} </author>
+    <title>{{ post.title | xml_escape }}</title>
+    <link href="{{ site.url }}{{site.baseurl}}{{ post.url }}"/>
+    <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+    <guid>{{ site.url }}{{site.baseurl}}{{ post.id }}</guid>
+    <category>{{ post.categories }}</category>
+    <description type="html">{{ post.content | xml_escape }}</description>
+  </item>
+  {% endfor %}
+</channel>
 
-</feed>

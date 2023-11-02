@@ -11,7 +11,11 @@
   }) %>
   -->
   {% for category in item.categories %}
-  <a class="article-category-link" href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>
+    {% for objectcategory in site.data.allcats %}
+      {% if category == objectivecategory.name %}
+        <a class="article-category-link" href="{{ site.baseurl }}/categories/#{{ category }}">{{ objectivecategory.display_name }}</a>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 </div>
 {% endif %}
