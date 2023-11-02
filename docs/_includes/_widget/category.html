@@ -5,7 +5,7 @@
 		{% for item in site.categories %}
 		  {% if item[1] | size != 0 %}
 		  	{% for objectcategory in site.data.allcats %}
-      			{% if category == objectcategory.name %}
+      			{% if item[0] == objectcategory.name %}
         			<li>
         				<a href="{{ site.baseurl }}/categories/#{{ item[0] }}" title="{{ objectcategory.display_name }}">{{ objectcategory.display_name }}<sup>{{ item[1] | size }}</sup></a>
         			</li>

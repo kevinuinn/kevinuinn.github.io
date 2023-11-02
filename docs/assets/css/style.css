@@ -1866,7 +1866,7 @@ section.comment {
 
 .categorieslist li a {
 	display: block;
-	padding: 0em 5%;
+	padding: .5em 0%;
 }
 
 .categorieslist li a:hover {
