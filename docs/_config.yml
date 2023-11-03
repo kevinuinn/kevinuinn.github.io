@@ -32,7 +32,7 @@ paginate: 10
 
 #### Site
 title : Tales of Copenhag
-tagline: A tier-one loser in academia
+tagline: 一流学渣 | A tier-one loser in academia
 assets: /assets
 url:
 baseurl:
@@ -123,10 +123,11 @@ links:
 
 #### Comment
 duoshuo_shortname:    ## e.g. wuchong      your duoshuo short name.       website: http://duoshuo.com
-disqus_shortname:  kevinuinn   ## e.g. wuchong      your disqus short name.        website: http://disqus.com
+disqus_shortname:  ## kevinuinn   ## e.g. wuchong      your disqus short name.        website: http://disqus.com
 hypercomments_id:     ## e.g. 91510        your hypercomments widget id.  website: http://hypercomments.com
 yungentie_productkey: ## your netease yungentie product key.              website: https://gentie.163.com
-livere: MTAyMC81NDk3OC8zMTQ0Nw==
+livere: ## MTAyMC81NDk3OC8zMTQ0Nw==
+twikoo: https://kevinuinn-blog-comments.netlify.app/.netlify/functions/twikoo
 ## set only one of them
 ## duoshuo will be shutting down on June 1, 2017
 

@@ -1,6 +1,6 @@
 <section id="comments" class="comment">
   <div id="article-content">
-    <p>欢迎评论！有两个评论系统可选：Disqus（音同discuss）和Livere（音同library）。视所处网络环境和喜好，可任选评论。前者需要梯子，但支持匿名。详阅<a href='/about/index.html'>此处。</a><br></p>
+    <p>作者已抛砖，望引金玉言。读者请自由发言，匿名与否，全凭自愿。<br></p>
   </div>
 </section>
 {% if site.duoshuo_shortname %}
@@ -71,4 +71,19 @@ Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true)
 </div>
 </section>
 
+{% endif %}
+{% if site.twikoo %}
+  <section id="comments" class="comment">
+    <div id="tcomment"></div>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.22/twikoo.all.min.js"></script>
+    <script>
+      twikoo.init({
+        envId: '{{ site.twikoo }}', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+        el: '#tcomment', // 容器元素
+        // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+        // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+        // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+      })
+    </script>
+  </section>
 {% endif %}

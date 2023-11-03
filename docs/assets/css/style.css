@@ -35,13 +35,18 @@ caption,th,td {
 a img {
 	border: none
 }/* custom Font*/
+
 @font-face {
-	font-family:"Helvetica";font-weight:normal;font-style:normal;
-}/* icon Font */
+	font-family:"SourceHanSans";
+	
+	src:url("../font/SourceHanSans-VF.otf") format("opentype");
+	src:url("../font/SourceHanSans-VF.ttc") format("truetype");
+}
+/* icon Font */
+
 @font-face {
 	font-family:"FontAwesome";font-style:normal;font-weight:normal;src:url("../font/fontawesome-webfont.eot?v=#4.0.3");src:url("../font/fontawesome-webfont.eot?#iefix&v=#4.0.3") format("embedded-opentype"),url("../font/fontawesome-webfont.woff?v=#4.0.3") format("woff"),url("../font/fontawesome-webfont.ttf?v=#4.0.3") format("truetype"),url("../font/fontawesome-webfont.svg#fontawesomeregular?v=#4.0.3") format("svg")
 }
-
 @font-face {
 	font-family:"fontdiao";font-weight:normal;font-style:normal;src:url("../font/fontdiao.eot");src:url("../font/fontdiao.eot?#iefix") format('embedded-opentype'),url("../font/fontdiao.svg#fontdiao") format('svg'),url("../font/fontdiao.woff") format('woff'),url("../font/fontdiao.ttf") format('truetype')
 }/* Public style */
@@ -52,7 +57,7 @@ a img {
 
 body {
 	background: #ddd;
-	font-family: "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei","PingFang SC", Arial,sans-serif;
+	font-family: "SourceHanSans", sans-serif;
 	font-size: 100%;
 	color: #817c7c;
 	line-height: 1.5
@@ -639,14 +644,39 @@ header nav ul li a:hover {
 	text-indent: 0em;
 }
 
+#main section.post .dateandtitle{
+	border: 0;
+}
+
+#main section.post .datepub{
+	width: 10em;
+	text-align: left;
+	vertical-align: middle;
+}
+
+#main section.post .titlepub{
+	
+	text-align: left;
+	vertical-align: middle;
+}
+
+@media only screen and (min-width: 568px) {
+	#main section.post a h1 {
+		
+		margin-left: 0%;
+	}
+}
+
+
 #main section.post a p {
 	color: #817c7c;
 }
 
 #main section.post a time {
 	color: #817c7c;
-	display: block;
-	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
 	font-size: .9em;
 }
 
@@ -874,7 +904,8 @@ header nav ul li a:hover {
 
 .archive-part section.post time {
 	font-size: 1.1em !important;
-	float: left;
+	
+	
 }
 
 @media only screen and (max-width:568px) {
@@ -885,7 +916,8 @@ header nav ul li a:hover {
 
 @media only screen and (min-width:568px) {
 	.archive-part section.post time {
-		width: 20%
+		
+		float: left;
 	}
 }
 
@@ -940,7 +972,7 @@ article header.article-info >p.article-author {
 	padding: .3em 4% .3em 0;
 	text-align: right;
 	border-bottom: 1px solid #dbdbdb;
-	float: center;
+	float: none;
 }
 
 @media only screen and (min-width:768px) {
@@ -951,10 +983,10 @@ article header.article-info >p.article-author {
 }
 
 article header.article-info >p.article-time {
-	padding-top: .3em;
+	padding-top: 0em;
 	font-size: .8em;
 	text-align: center;
-	float: center;
+	float: none;
 }
 
 @media only screen and (min-width:768px) {
@@ -1587,7 +1619,8 @@ footer.article-footer {
 
 .article-nav .prev {
 	width: 100%;
-	float: middle;
+	text-align: center;
+	float: none;
 }
 
 .article-nav .prev strong {
@@ -1605,14 +1638,15 @@ footer.article-footer {
 @media only screen and (min-width:768px) {
 	.article-nav .prev {
 		width: 45%;
-		float: left
+		float: left;
+		text-align: left;
 	}
 }
 
 .article-nav .next {
 	width: 100%;
-	float: middle;
-	text-align: left;
+	text-align: center;
+	float: none;
 }
 
 .article-nav .next strong {

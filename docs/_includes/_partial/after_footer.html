@@ -264,14 +264,101 @@ $(document).ready(function(){
 {% endif %}
 -->
 
-{% if page.layout == 'archives' or page.layout == 'categories' or page.layout == 'tags' %}
+{% if page.layout == 'archives' %}
 <script type="text/javascript">
 $(document).ready(function(){
     var show_post = function(anchor) {
         $(".post").hide();
         var cls = anchor.substr(1);
         $("." + cls).show();
-        $(".archive-folder").text(cls);
+        var new_archive_title = cls.substr(0,4) + "年" + cls.substr(5,6) + "月";
+        $(".archive-folder").text(new_archive_title);
+        $("title").text(new_archive_title + "的文章 | Tales of Copenhag" );
+    }
+    if (document.location.hash) {
+        show_post(document.location.hash);
+    }
+    $('a[href*=#]').click(function() {
+        if (this.hash) {
+            show_post(this.hash);
+        }
+    });
+
+});
+</script>
+{% elsif page.layout == 'categories' %}
+<script type="text/javascript">
+$(document).ready(function(){
+    var show_post = function(anchor) {
+        $(".post").hide();
+        var cls = anchor.substr(1);
+        $("." + cls).show();
+        switch (cls) {
+          case "Chen_ai_bu_jian_xian_yang_qiao":
+            var new_category_title = "尘埃不见咸阳桥";
+            break;
+          case "Lu_zhuan_xi_qiao_hu_jian":
+            var new_category_title = "路转溪桥忽见";
+            break;
+          case "Lang_tao_feng_bo_zi_tian_ya":
+            var new_category_title = "浪淘风簸自天涯";
+            break;
+          case "Liu_shui_wu_qing_cao_zi_chun":
+            var new_category_title = "流水无情草自春";
+            break;
+          case "Yi_xi_wan_gu_fan_ma_kong":
+            var new_category_title = "一洗万古凡马空";
+            break;
+          case "Zheng_shi_cheng_huang_jyu_lyu_shi":
+            var new_category_title = "正是橙黄橘绿时";
+            break;
+          case "Le_you_yuan_shang_qing_qiu_jie":
+            var new_category_title = "乐游原上清秋节";
+            break;
+          default:
+            var new_category_title = cls;
+            break;
+        }
+        $(".archive-folder").text(new_category_title);
+        $("title").text("分类：" + new_category_title + " | Tales of Copenhag" );
+    }
+    if (document.location.hash) {
+        show_post(document.location.hash);
+    }
+    $('a[href*=#]').click(function() {
+        if (this.hash) {
+            show_post(this.hash);
+        }
+    });
+
+});
+</script>
+{% elsif page.layout == 'tags' %}
+<script type="text/javascript">
+$(document).ready(function(){
+    var show_post = function(anchor) {
+        $(".post").hide();
+        var cls = anchor.substr(1);
+        $("." + cls).show();
+        switch (cls) {
+          case "Tan_xiao_you_hong_ru":
+            var new_tag_title = "谈笑有鸿儒";
+            break;
+          case "Han_ying_ju_hua":
+            var new_tag_title = "含英咀华";
+            break;
+          case "Chang_hen_ci_shen_fei_wo_you":
+            var new_tag_title = "长恨此身非我有";
+            break;
+          case "Xin_you_ling_xi_yi_dian_tong":
+            var new_tag_title = "心有灵犀一点通";
+            break;
+          default:
+            var new_tag_title = cls;
+            break;
+        }
+        $(".archive-folder").text(new_tag_title);
+        $("title").text("标签：" + new_tag_title + " | Tales of Copenhag" );
     }
     if (document.location.hash) {
         show_post(document.location.hash);
