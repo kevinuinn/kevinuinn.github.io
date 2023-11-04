@@ -38,9 +38,11 @@ a img {
 
 @font-face {
 	font-family:"SourceHanSans";
+
+	src:url("../font/SourceHanSansSC-VF.woff2") format("woff2");
 	
-	src:url("../font/SourceHanSans-VF.otf") format("opentype");
-	src:url("../font/SourceHanSans-VF.ttc") format("truetype");
+	/*src:url("../font/SourceHanSans-VF.otf") format("opentype");
+	src:url("../font/SourceHanSans-VF.ttc") format("truetype");*/
 }
 /* icon Font */
 
@@ -57,7 +59,8 @@ a img {
 
 body {
 	background: #ddd;
-	font-family: /* "SourceHanSans", */ sans-serif;
+	font-display: swap;
+	font-family: "SourceHanSans", system-ui, sans-serif;
 	font-size: 100%;
 	color: #817c7c;
 	line-height: 1.5
@@ -417,7 +420,7 @@ body >header a {
 
 #textlogo h1.site-name {
 	width: 86%;
-	font-family: "covered_by_your_graceregular";
+	/*font-family: "covered_by_your_graceregular";*/
 	font-size: 200%;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
@@ -2241,7 +2244,7 @@ footer {
 }
 
 .info {
-	font-family: "covered_by_your_graceregular";
+	/*font-family: "covered_by_your_graceregular";*/
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 150%;
@@ -2371,7 +2374,7 @@ footer {
 .copyright {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: "covered_by_your_graceregular";
+	/*font-family: "covered_by_your_graceregular";*/
 	width: 100%;
 	color: #fff;
 	text-align: center;
