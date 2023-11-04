@@ -1,7 +1,8 @@
+
 <script src="{{ site.baseurl }}{{ site.assets }}/js/jquery-2.0.3.min.js"></script>
-<script src="{{ site.baseurl }}{{ site.assets }}/js/jquery.imagesloaded.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.min.js"></script>
 <script src="{{ site.baseurl }}{{ site.assets }}/js/gallery.js"></script>
-<script src="{{ site.baseurl }}{{ site.assets }}/js/jquery.qrcode-0.12.0.min.js"></script>
+<!-- <script src="{{ site.baseurl }}{{ site.assets }}/js/jquery.qrcode-0.12.0.min.js"></script> -->
 <script src="{{ site.baseurl }}{{ site.assets }}/js/toc.js"></script>
 
 <script type="text/javascript">
@@ -240,6 +241,16 @@ var disqus_shortname = '{{ site.disqus_shortname }}';
 <br>
 {% endif %}
 {% if site.twikoo %}
+  <script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.20/twikoo.min.js"></script>
+    <script>
+      twikoo.init({
+        envId: '{{ site.twikoo }}', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+        el: '#tcomment', // 容器元素
+        // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+        // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+        // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+      })
+    </script>
 {% endif %}
 
 <!--
@@ -374,8 +385,11 @@ $(document).ready(function(){
 {% endif %}
 
 {% if site.fancybox %}
-<link rel="stylesheet" href="{{ site.baseurl }}{{ site.assets }}/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="{{ site.baseurl }}{{ site.assets }}/fancybox/jquery.fancybox.pack.js"></script>
+<!-- <link rel="stylesheet" href="{{ site.baseurl }}{{ site.assets }}/fancybox/jquery.fancybox.css" media="screen" type="text/css"> 
+<script src="{{ site.baseurl }}{{ site.assets }}/fancybox/jquery.fancybox.pack.js"></script> -->
+<link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" rel="stylesheet" media="screen" type="text/css">
+
+<script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
   $('.article-content').each(function(i){
