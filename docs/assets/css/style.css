@@ -57,7 +57,7 @@ a img {
 
 body {
 	background: #ddd;
-	font-family: "SourceHanSans", sans-serif;
+	font-family: /* "SourceHanSans", */ sans-serif;
 	font-size: 100%;
 	color: #817c7c;
 	line-height: 1.5
